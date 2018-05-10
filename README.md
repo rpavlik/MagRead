@@ -8,7 +8,8 @@ predominant ones found, and the only exceptions I've personally run across are
 hotel keys.
 
 
-Try <a href="https://github.com/earlvanze/SWipe">this</a> updated version instead, which reads track 1 of the card. track 2 is the normal track with the card number and expiration date (along with a couple other pieces of information), and track 1 has everything on track 2 plus the cardholder’s name and the CVV (different from what most people consider the CVV on the back of the card). <a href="http://andybromberg.com/credit-cards/">Read more</a> from Andy Bromberg below.
+Try <a href="https://github.com/earlvanze/SWipe">this</a> updated version instead, which reads track 1 of the card. Track 2 is the normal track with the card number and expiration date (along with a couple other pieces of information), and track 1 has everything on track 2 plus the cardholder’s name and the CVV (different from what most people consider the CVV on the back of the card).
+<a href="http://andybromberg.com/credit-cards/">Read more</a> from Andy Bromberg below.
 
 ## Requirements:
  - A hardware audio dongle to read the cards, such as those provided by Square
