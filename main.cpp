@@ -17,7 +17,7 @@
     Written by Jeffrey Malone <ieatlint@tehinterweb.com>
     http://blog.tehinterweb.com
 */
-#include <QtGui/QApplication>
+#include <QtWidgets/QApplication>
 #include "magread.h"
 
 int main(int argc, char *argv[])

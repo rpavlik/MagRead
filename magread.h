@@ -23,7 +23,7 @@
 #define QUOTE_(x) #x
 #define QUOTE(x) QUOTE_(x)
 
-#include <QtGui/QMainWindow>
+#include <QtWidgets/QMainWindow>
 #include <QGridLayout>
 #include <QWidget>
 #include <QLabel>

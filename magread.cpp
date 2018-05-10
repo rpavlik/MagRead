@@ -25,8 +25,8 @@ MagRead::MagRead(QWidget *parent) : QMainWindow(parent) {
 	captureAudio = false;
 	partialRead = false;
 
-	audioFormat.setFrequency( 48000 );
-	audioFormat.setChannels( 1 );
+	audioFormat.setSampleRate( 48000 );
+	audioFormat.setChannelCount( 1 );
 	audioFormat.setSampleSize( 16 );
 	audioFormat.setCodec( "audio/pcm" );
 	audioFormat.setByteOrder( QAudioFormat::LittleEndian );
