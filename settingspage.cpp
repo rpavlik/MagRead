@@ -19,6 +19,16 @@
 */
 #include "settingspage.h"
 #include <QDebug>
+#include <QtWidgets/QGroupBox>
+#include <QtWidgets/QSlider>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QComboBox>
+#include <QAudioDeviceInfo>
+#include <QSettings>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
 
 SettingsPage::SettingsPage() {
 	widget = new QWidget;
