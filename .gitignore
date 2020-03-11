@@ -1,2 +1,6 @@
 MagRead.pro.user
 .*swp
+Makefile
+.qmake.stash
+*.o
+MagRead.app
