@@ -23,27 +23,13 @@
 #define QUOTE_(x) #x
 #define QUOTE(x) QUOTE_(x)
 
-#include <QtWidgets/QMainWindow>
-#include <QGridLayout>
-#include <QWidget>
-#include <QLabel>
-#include <QPushButton>
-#include <QDate>
-#include <QCheckBox>
-#include <QScrollArea>
-#include <QAction>
-
-#include <QMetaType>
 #include <QAudioInput>
+#include <QMetaType>
+#include <QtWidgets/QMainWindow>
 
 #ifdef Q_WS_MAEMO_5
 #include <QMaemo5InformationBox>
 #endif
-
-#include <QMessageBox>
-#include <QTimer>
-
-#include <QMenuBar>
 
 #include "carddetect.h"
 #include "magcard.h"

@@ -20,17 +20,17 @@
 #ifndef SETTINGSPAGE_H
 #define SETTINGSPAGE_H
 
-#include <QScrollArea>
-#include <QGroupBox>
-#include <QSlider>
-#include <QVBoxLayout>
-#include <QCheckBox>
-#include <QLabel>
-#include <QComboBox>
+#include <QtWidgets/QScrollArea>
+#include <QtWidgets/QGroupBox>
+#include <QtWidgets/QSlider>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QComboBox>
 #include <QAudioDeviceInfo>
 #include <QSettings>
-#include <QPushButton>
-#include <QRadioButton>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
 
 class SettingsPage : public QScrollArea {
 	Q_OBJECT

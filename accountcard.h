@@ -1,16 +1,14 @@
 #ifndef ACCOUNTCARD_H
 #define ACCOUNTCARD_H
 
-#include <QWidget>
-#include <QVBoxLayout>
-#include <QHBoxLayout>
-#include <QLabel>
-#include <QEvent>
-
-#include <QApplication>
-#include <QDesktopWidget>
+#include <QtCore/QEvent>
+#include <QtWidgets/QWidget>
 
 #include "magcard.h"
+
+class QLabel;
+class QVBoxLayout;
+class QHBoxLayout;
 
 class AccountCard : public QWidget {
 	Q_OBJECT

@@ -1,6 +1,12 @@
 #include "aamvacard.h"
 
 #include <QDebug>
+#include <QtCore/QEvent>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QDesktopWidget>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QVBoxLayout>
 
 AAMVACard::AAMVACard( MagCard *_card ) {
 	QLabel *label;

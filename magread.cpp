@@ -20,6 +20,18 @@
 #include "magread.h"
 
 #include <QDebug>
+#include <QtCore/QDate>
+#include <QtCore/QTimer>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenuBar>
+#include <QtWidgets/QMessageBox>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
+#include <QtWidgets/QWidget>
 
 MagRead::MagRead(QWidget *parent) : QMainWindow(parent) {
 	captureAudio = false;

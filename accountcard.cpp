@@ -1,6 +1,13 @@
 #include "accountcard.h"
 
 #include <QDebug>
+#include <QtCore/QEvent>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QDesktopWidget>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 AccountCard::AccountCard( MagCard *_card ) {
 	QLabel *label;
