@@ -1,5 +1,4 @@
 #ifndef LLIST_H
-#include <stdlib.h>
 
 typedef struct llist_n {
 	int idx;

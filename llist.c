@@ -1,4 +1,5 @@
 #include "llist.h"
+#include <stdlib.h>
 
 
 LListH *llist_init() {

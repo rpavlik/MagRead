@@ -15,6 +15,10 @@
  */
 #include "mslib.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 /* Data Create/Free functions */
 msData *_ms_create() {
 	msData *ms;

@@ -13,22 +13,26 @@
 
     You should have received a copy of the GNU General Public License
     along with MagRead.  If not, see <http://www.gnu.org/licenses/>.
-    
+
     Written by Jeffrey Malone <ieatlint@tehinterweb.com>
     http://blog.tehinterweb.com
 */
 #include "settingspage.h"
-#include <QDebug>
-#include <QtWidgets/QGroupBox>
-#include <QtWidgets/QSlider>
-#include <QtWidgets/QVBoxLayout>
-#include <QtWidgets/QCheckBox>
-#include <QtWidgets/QLabel>
-#include <QtWidgets/QComboBox>
 #include <QAudioDeviceInfo>
+#include <QCheckBox>
+#include <QComboBox>
+#include <QGroupBox>
+#include <QLabel>
+#include <QList>
+#include <QPushButton>
+#include <QRadioButton>
 #include <QSettings>
-#include <QtWidgets/QPushButton>
-#include <QtWidgets/QRadioButton>
+#include <QSlider>
+#include <QVBoxLayout>
+#include <QVariant>
+#include <QWidget>
+#include <QtCore>
+
 
 SettingsPage::SettingsPage() {
 	widget = new QWidget;
@@ -53,7 +57,7 @@ SettingsPage::SettingsPage() {
 
 void SettingsPage::makeGeneralBox() {
 	generalBox = new QGroupBox( "General Settings" );
-	
+
 	generalLayout = new QVBoxLayout;
 
 	formatCredit = new QCheckBox( "Format Bank Cards" );
@@ -131,7 +135,7 @@ void SettingsPage::autoReorient_checked( int state ) {
 	if( state == Qt::Checked )
 		settings->setValue( "autoReorient", true );
 	else
-		settings->setValue( "autoReorient", false );	
+		settings->setValue( "autoReorient", false );
 #ifdef Q_WS_MAEMO_5
 	if( settings->value( "autoReorient" ) == true ) {
 		emit autoReorientSig( true );
@@ -167,7 +171,7 @@ void SettingsPage::makeAudioBox() {
 	}
 	audioLayout->addWidget( audioSource );
 	connect( audioSource, SIGNAL( currentIndexChanged( QString ) ), this, SLOT( audioDeviceChanged( QString ) ) );
-	
+
 	normCBox = new QCheckBox( "Auto-Detect Normalzation" );
 	audioLayout->addWidget( normCBox );
 	connect( normCBox, SIGNAL( stateChanged( int ) ), this, SLOT( normChecked( int ) ) );
@@ -185,7 +189,7 @@ void SettingsPage::makeAudioBox() {
 		normSlider->setSliderPosition( settings->value( "norm" ).toInt() );
 	else
 		normSlider->setSliderPosition( 0 );
-	
+
 	if( !settings->contains( "normAuto" ) || settings->value( "normAuto" ) == true ) {
 		normCBox->setCheckState( Qt::Checked );
 		normSlider->setEnabled( false );
@@ -209,7 +213,7 @@ void SettingsPage::makeAudioBox() {
 	} else {
 		silenceSlider->setSliderPosition( 300 );
 	}
-	
+
 	silenceLabel->setText( QString( "Silence Threshold: %1" ).arg( silenceSlider->value() ) );
 
 	audioBox->setLayout( audioLayout );

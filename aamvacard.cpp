@@ -1,12 +1,17 @@
 #include "aamvacard.h"
 
-#include <QDebug>
-#include <QtCore/QEvent>
-#include <QtWidgets/QApplication>
-#include <QtWidgets/QDesktopWidget>
-#include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QLabel>
-#include <QtWidgets/QVBoxLayout>
+#include "magcard.h"         // for MagCard
+
+#include <QDate>             // for QDate
+#include <QDebug>            // for QDebug
+#include <QEvent>            // for QEvent, QEvent::Resize
+#include <QHBoxLayout>       // for QHBoxLayout
+#include <QLabel>            // for QLabel
+#include <QObject>           // for QObject
+#include <QSize>             // for QSize
+#include <QVBoxLayout>       // for QVBoxLayout
+#include <Qt>                // for AlignHCenter
+
 
 AAMVACard::AAMVACard( MagCard *_card ) {
 	QLabel *label;
@@ -105,7 +110,7 @@ void AAMVACard::reorient() {
 bool AAMVACard::eventFilter( QObject *obj, QEvent *event ) {
 	if( event->type() == QEvent::Resize )
 		reorient();
-	
+
 	return QObject::eventFilter( obj, event );
 }
 

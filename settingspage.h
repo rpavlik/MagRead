@@ -13,25 +13,27 @@
 
     You should have received a copy of the GNU General Public License
     along with MagRead.  If not, see <http://www.gnu.org/licenses/>.
-    
+
     Written by Jeffrey Malone <ieatlint@tehinterweb.com>
     http://blog.tehinterweb.com
 */
 #ifndef SETTINGSPAGE_H
 #define SETTINGSPAGE_H
 
-#include <QtWidgets/QScrollArea>
+#include <QScrollArea>
+#include <QString>
 
-class QCheckBox;
 class QCheckBox;
 class QComboBox;
 class QGroupBox;
 class QLabel;
+class QObject;
 class QPushButton;
 class QRadioButton;
 class QSettings;
 class QSlider;
 class QVBoxLayout;
+class QWidget;
 
 class SettingsPage : public QScrollArea {
 	Q_OBJECT

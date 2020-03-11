@@ -1,13 +1,18 @@
 #include "accountcard.h"
 
+#include "magcard.h"
+
 #include <QDebug>
 #include <QtCore/QEvent>
-#include <QtWidgets/QApplication>
-#include <QtWidgets/QDesktopWidget>
-#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QVBoxLayout>
-#include <QtWidgets/QWidget>
+#include <QDate>             // for QDate
+#include <QEvent>            // for QEvent, QEvent::Resize
+#include <QHBoxLayout>       // for QHBoxLayout
+#include <QLabel>            // for QLabel
+#include <QObject>           // for QObject
+#include <QSize>             // for QSize
+#include <QVBoxLayout>       // for QVBoxLayout
+
 
 AccountCard::AccountCard( MagCard *_card ) {
 	QLabel *label;
@@ -64,7 +69,7 @@ AccountCard::AccountCard( MagCard *_card ) {
 	orientation = UNSET;
 	reorient();
 	installEventFilter( this );
-	
+
 	if( _card ) {
 		card = _card;
 		showData();
@@ -117,7 +122,7 @@ void AccountCard::reorient() {
 bool AccountCard::eventFilter( QObject *obj, QEvent *event ) {
 	if( event->type() == QEvent::Resize )
 		reorient();
-	
+
 	return QObject::eventFilter( obj, event );
 }
 

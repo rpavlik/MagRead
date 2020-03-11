@@ -1,20 +1,23 @@
 #ifndef AAMVACARD_H
 #define AAMVACARD_H
 
-#include <QtWidgets/QWidget>
+#include <QFont>
+#include <QString>
+#include <QWidget>
 
-#include "magcard.h"
-
-class QLabel;
-class QVBoxLayout;
+class MagCard;
+class QEvent;
 class QHBoxLayout;
+class QLabel;
+class QObject;
+class QVBoxLayout;
 
 class AAMVACard : public QWidget {
 	Q_OBJECT
 	public:
 		explicit AAMVACard( MagCard *_card = 0 );
 		void setCard( MagCard *_card );
-	
+
 	private:
 		void showData();
 		void reorient();

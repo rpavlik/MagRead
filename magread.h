@@ -40,6 +40,12 @@
 
 #include "settingspage.h"
 
+class QGroupBox;
+class QSlider;
+class QComboBox;
+class QRadioButton;
+class QSettings;
+class QPushButton;
 
 class MagRead : public QMainWindow {
 	Q_OBJECT

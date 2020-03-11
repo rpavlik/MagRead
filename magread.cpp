@@ -22,6 +22,7 @@
 #include <QDebug>
 #include <QtCore/QDate>
 #include <QtCore/QTimer>
+#include <QSettings>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QGridLayout>

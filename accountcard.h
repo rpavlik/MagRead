@@ -1,14 +1,18 @@
 #ifndef ACCOUNTCARD_H
 #define ACCOUNTCARD_H
 
+#include <QFont>
+#include <QString>
 #include <QtCore/QEvent>
 #include <QtWidgets/QWidget>
+#include <QWidget>
 
-#include "magcard.h"
-
-class QLabel;
-class QVBoxLayout;
+class MagCard;
+class QEvent;
 class QHBoxLayout;
+class QLabel;
+class QObject;
+class QVBoxLayout;
 
 class AccountCard : public QWidget {
 	Q_OBJECT
@@ -33,7 +37,7 @@ class AccountCard : public QWidget {
 
 		QLabel *accountNumber;
 		QLabel *accountHolder;
-		
+
 		QWidget *vFlexWidget;
 		QVBoxLayout *vFlexBox;
 
