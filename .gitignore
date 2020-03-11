@@ -4,5 +4,6 @@ Makefile
 .qmake.stash
 *.o
 MagRead.app
+MagRead
 moc_*
 .vscode/
