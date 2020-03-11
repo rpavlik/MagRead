@@ -235,7 +235,7 @@ void CardDetect::aamvaCardCheck( QString expDate ) {
 
 		expDate.prepend( "20" );
 		card->expirationDate = QDate::fromString( expDate, "yyyyMM" );
-		card->expirationDate.addDays( card->expirationDate.daysInMonth() - 1 );
+		card->expirationDate = card->expirationDate.addDays( card->expirationDate.daysInMonth() - 1 );
 	}
 
 }
